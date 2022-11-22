@@ -66,7 +66,7 @@ def drone_control(drone, camera_ip):
                 for i in range(ids.size):  # для каждого маркера в кадре
                     if ids[i] not in ids_buf:  # если найденный маркер раньше не встречался
                         ids_buf.append(ids[i])  # записывает в буфер его ID
-                        print("[INFO] Найден новый Aruco маркер, его ID: {}".format(ids))
+                        print("[INFO] Найден новый ArUco маркер, его ID: {}".format(ids))
                         print('Маркер сохраняется, его ID - ', ids[i])
                         # сохраняет кадр с обведённым маркером и вставляет его ID в конце названия файла
                         cv2.imwrite(os.path.join(ARUCO, 'markerid_%d.jpg' % ids[i]), camera_frame)
